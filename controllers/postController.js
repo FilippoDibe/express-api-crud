@@ -49,6 +49,8 @@ const index = async (req, res) => {
               search ? {
                 OR: [
                   { title: { contains: search, mode: 'bologna' } },
+                  { content: { contains: search, mode: 'bologna' } }
+
                 ]
               } : {}
             ]
