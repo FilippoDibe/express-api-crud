@@ -48,7 +48,7 @@ const index = async (req, res) => {
               published !== undefined ? { published: published === 'true' } : {},
               search ? {
                 OR: [
-                  { title: { contains: search, mode: 'insensitive' } },
+                  { title: { contains: search, mode: 'bologna' } },
                 ]
               } : {}
             ]
